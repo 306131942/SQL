@@ -1,5 +1,18 @@
 
-http://www.cnblogs.com/fightLonely/archive/2011/02/24/1963907.html
+--row_number 的使用
+--
+--http://www.studyofnet.com/news/180.html(有时间看看)
+--
+SELECT TOP 20 rn = row_number() over (partition by wfna_m_id order by wfna_id asc), * FROM fidb.dbo.tfi_billhead_a a --WHERE a.wfna_emp_id = '00000001' AND a.wfna_state = 0
+--使用row_number（）函数进行编号
+SELECT TOP 20 rn = row_number() over (order by wfna_id asc), * FROM fidb.dbo.tfi_billhead_a a
+
+SELECT  rn = row_number() over (partition by splr_name_cn order by splr_id asc),splr_code,splr_name_cn, * FROM HSRP.dbo.tfi_suppliers
+
+
+--with as 的使用
+
+--http://www.cnblogs.com/fightLonely/archive/2011/02/24/1963907.html
 
 1、with as 含义：
 	WITH AS短语，也叫做子查询部分（subquery factoring），可以让你做很多事情，定义一个SQL片断，该SQL片断会被整个SQL语句所用到。有的时候，是为了让SQL语句的可读性更高些，也有可能是在UNION ALL的不同部分，作为提供数据的部分。 
@@ -20,5 +33,6 @@ table1 as
 )
 select * from table1  --  使用了名为table1的公共表表达式
 select * from table1  --  使用了名为table1的数据表
+	
 	
 	
