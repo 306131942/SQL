@@ -1,3 +1,21 @@
+
+五、账号密码等
+github
+306139142@qq.com
+lcg...
+RAP：
+luochuangui
+lcg...
+postman
+email:306139142@qq.com
+username:luocg
+password:lcg...
+
+
+
+
+
+
 1,设置 ANSI_NULLS 和 QUOTED_IDENTIFIER
 SET ANSI_NULLS ON -- SQL-92 标准要求在对空值进行等于 (=) 或不等于 (<>) 比较时取值为 FALSE
 GO
